@@ -1,27 +1,43 @@
-.new-patient-modal{
-  padding: 1.5rem;
-  max-width: 27rem;
+.new-patient-modal {
+  background-color: #b4b4b4a6;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
 
-  .row-inputs-1{
-    display:flex;
-    justify-content: space-between;
-    .sex-input{
-      width: 10.5rem;
+  .card {
+    z-index: 5;
+    cursor: default;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    max-width: 27rem;
+
+    .row-inputs-1 {
+      display: flex;
+      justify-content: space-between;
+      .sex-input {
+        width: 10.5rem;
+      }
     }
-  }
 
-  .form-check{
-    margin-left: 0.5rem;
-  }
-
-  .buttons-row{
-    display:flex;
-    justify-content: space-between;
-    button{
-      width: 100%;
+    .form-check {
+      margin-left: 0.5rem;
     }
-    .btn-secondary{
-      margin: 0 0.8rem;
+
+    .buttons-row {
+      display: flex;
+      justify-content: space-between;
+      button {
+        width: 100%;
+      }
+      .btn-secondary {
+        margin: 0 0.8rem;
+      }
     }
   }
 }

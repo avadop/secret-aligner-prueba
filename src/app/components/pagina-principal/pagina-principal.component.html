@@ -15,10 +15,10 @@
     </div>
   </div>
   <div class="buttons">
-    <button type="button" class="btn btn-outline-primary"><img src="/assets/icons/plus.svg">Nuevo Paciente</button>
+    <button type="button" class="btn btn-outline-primary" (click)="abrirModalNuevoPaciente()"><img src="/assets/icons/plus.svg">Nuevo Paciente</button>
     <button type="button" class="btn btn-outline-primary"><img src="/assets/icons/file-arrow-down-fill.svg"> Descargar CSV</button>
   </div>
 <app-listado-pacientes [resumenTodosPacientes]="resumenPacientesFiltrados"></app-listado-pacientes>
 </div>
 
-<app-nuevo-paciente></app-nuevo-paciente>
+<app-nuevo-paciente *ngIf="nuevoPacienteModal" [formularioPaciente]="formularioNuevoPaciente" (accionesModal)="capturarAccionesModal($event)"></app-nuevo-paciente>
