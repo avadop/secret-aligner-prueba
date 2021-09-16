@@ -1,0 +1,24 @@
+<div class="main-page">
+  <div class="upper-bar"><span>Listado de Pacientes</span></div>
+  <div class="upper-title">
+  <div class="title">
+    <img src="/assets/icons/card-front.svg">
+    <div class="sub-title">
+      <h5>Lista de Pacientes</h5>
+      <span>Visualizacion de pacientes</span>
+    </div>
+  </div>
+
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping"><img src="/assets/icons/search.svg"></span>
+      <input type="text" class="form-control" placeholder="Buscar..." [formControl]="valorBusqueda" (keyup)="realizarBusqueda()">
+    </div>
+  </div>
+  <div class="buttons">
+    <button type="button" class="btn btn-outline-primary" (click)="abrirModalNuevoPaciente()"><img src="/assets/icons/plus.svg">Nuevo Paciente</button>
+    <button type="button" class="btn btn-outline-primary"><img src="/assets/icons/file-arrow-down-fill.svg"> Descargar CSV</button>
+  </div>
+<app-listado-pacientes [resumenTodosPacientes]="resumenPacientesFiltrados"></app-listado-pacientes>
+</div>
+
+<app-nuevo-paciente *ngIf="nuevoPacienteModal" [formularioPaciente]="formularioNuevoPaciente" (accionesModal)="capturarAccionesModal($event)"></app-nuevo-paciente>

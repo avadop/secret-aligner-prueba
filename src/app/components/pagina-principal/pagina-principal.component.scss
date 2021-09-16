@@ -1,0 +1,45 @@
+.main-page {
+  width: 85%;
+  margin: auto;
+  .upper-bar{
+    background-color: #ececec;
+    height: 2.7rem;
+    display:flex;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  .upper-title {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      display: flex;
+      img {
+        width: 1.5rem;
+      }
+
+      .sub-title {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    
+    .input-group {
+      width: 40%;
+      height: 3rem;
+    }
+  }
+
+  .buttons {
+    button {
+      margin: 1rem;
+    }
+    img {
+      width: 1.5rem;
+      filter: invert(27%) sepia(76%) saturate(4562%) hue-rotate(215deg) brightness(104%) contrast(99%);
+    }
+  }
+}

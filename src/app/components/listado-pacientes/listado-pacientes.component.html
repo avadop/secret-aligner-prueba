@@ -1,0 +1,37 @@
+
+<div class="button-bar">
+  <button type="button" class="btn btn-light" (click)="setVistaTabla(true)"><img src="/assets/icons/justify.svg"></button>
+  <button type="button" class="btn btn-light" (click)="setVistaTabla(false)"><img src="/assets/icons/grid.svg"></button>
+
+  <button type="button" class="btn btn-light" (click)="cambioTamanyoPagina(5)">5</button>
+  <button type="button" class="btn btn-light" (click)="cambioTamanyoPagina(10)">10</button>
+  <button type="button" class="btn btn-light" (click)="cambioTamanyoPagina(15)">15</button>
+</div>
+
+<app-tabla-pacientes *ngIf="vistaTabla; else vistaTarjetas" [resumenPacientes]="resumenPacientesPaginados">
+</app-tabla-pacientes>
+<ng-template #vistaTarjetas>
+  <div class="card-container">
+    <ng-container *ngFor="let resumen of resumenPacientesPaginados">
+      <app-tarjeta-paciente [resumenPaciente]="resumen"></app-tarjeta-paciente>
+    </ng-container>
+  </div>
+</ng-template>
+
+<div class="pagination-container">
+<ul class="pagination">
+  <li class="page-item">
+    <a class="page-link" (click)="paginaPrevia()" aria-label="Previous">
+      <span aria-hidden="true">&laquo;</span>
+    </a>
+  </li>
+  <ng-container *ngFor="let e of [].constructor(totalPaginas); let i = index">
+    <li class="page-item"><a class="page-link" (click)="cambioDePagina(i)">{{i+1}}</a></li>
+  </ng-container>
+  <li class="page-item">
+    <a class="page-link" (click)="paginaSiguiente()" aria-label="Next">
+      <span aria-hidden="true">&raquo;</span>
+    </a>
+  </li>
+</ul>
+</div>
