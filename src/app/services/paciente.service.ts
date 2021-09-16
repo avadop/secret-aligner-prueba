@@ -11,24 +11,17 @@ import { Paciente } from "../models/paciente.model"
 })
 
 export class PacienteService {
-  BASIC_URL = "http://localhost:3000";
+  BASIC_URL = "http://localhost:3000/pacientes";
 
   constructor(private httpClient: HttpClient) { }
 
-  getIdsPacientes(): Observable<Array<string>> {
-    return this.httpClient.get<Array<string>>(`${this.BASIC_URL}/ids`);
+  getResumenTodosPacientes(): Observable<Array<ResumenPaciente>> {
+    return this.httpClient.get<Array<Paciente>>(`${this.BASIC_URL}`).pipe(map(pacientes => pacientes.map(paciente => this.mapAResumenPaciente(paciente))));
   }
 
-  getPacientePorId(id: string): Observable<Paciente> {
-    return this.httpClient.get<Paciente>(`${this.BASIC_URL}/${id}`);
-  }
-  getResumenPacientePorId(id: string): Observable<ResumenPaciente> {
-    return this.httpClient.get<Paciente>(`${this.BASIC_URL}/${id}`).pipe(map(paciente => this.mapAResumenPaciente(id, paciente)));
-  }
-
-  private mapAResumenPaciente(id:string, paciente: Paciente): ResumenPaciente {
+  private mapAResumenPaciente(paciente: Paciente): ResumenPaciente {
     return {
-      id,
+      id: paciente.id,
       nombre: `${paciente.datos_paciente.nombre} ${paciente.datos_paciente.apellidos}`,
       estado: paciente.ficha_dental.estado,
       clinica: paciente.ficha_dental.clinica,
