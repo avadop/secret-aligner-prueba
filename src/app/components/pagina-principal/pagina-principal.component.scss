@@ -1,19 +1,26 @@
 .main-page {
-  padding-top: 1rem;
   width: 85%;
   margin: auto;
-  .upper-bar {
+  .upper-bar{
+    background-color: #ececec;
+    height: 2.7rem;
+    display:flex;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  .upper-title {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .titulo {
+    .title {
       display: flex;
       img {
         width: 1.5rem;
       }
 
-      .sub-titulo {
+      .sub-title {
         margin-left: 1rem;
         display: flex;
         flex-direction: column;

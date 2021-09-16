@@ -26,6 +26,8 @@ export class PaginaPrincipalComponent implements OnInit {
   realizarBusqueda(){
     if(this.valorBusqueda.value.length >= 3){
       this.resumenPacientesFiltrados = this.resumenPacientes.filter((resumen: ResumenPaciente) => resumen.nombre.toLocaleLowerCase().includes(this.valorBusqueda.value.toLowerCase()));
+    } else {
+      this.resumenPacientesFiltrados = this.resumenPacientes;
     }
   }
 
