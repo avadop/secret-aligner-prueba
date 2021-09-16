@@ -29,8 +29,7 @@ export class PacienteService {
   private mapAResumenPaciente(id:string, paciente: Paciente): ResumenPaciente {
     return {
       id,
-      nombre: paciente.datos_paciente.nombre,
-      apellidos: paciente.datos_paciente.apellidos,
+      nombre: `${paciente.datos_paciente.nombre} ${paciente.datos_paciente.apellidos}`,
       estado: paciente.ficha_dental.estado,
       clinica: paciente.ficha_dental.clinica,
       objetivo_tratamiento: paciente.ficha_dental.objetivo_tratamiento
