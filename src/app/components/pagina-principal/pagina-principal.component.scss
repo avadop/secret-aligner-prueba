@@ -1,0 +1,38 @@
+.main-page {
+  padding-top: 1rem;
+  width: 85%;
+  margin: auto;
+  .upper-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .titulo {
+      display: flex;
+      img {
+        width: 1.5rem;
+      }
+
+      .sub-titulo {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    
+    .input-group {
+      width: 40%;
+      height: 3rem;
+    }
+  }
+
+  .buttons {
+    button {
+      margin: 1rem;
+    }
+    img {
+      width: 1.5rem;
+      filter: invert(27%) sepia(76%) saturate(4562%) hue-rotate(215deg) brightness(104%) contrast(99%);
+    }
+  }
+}
