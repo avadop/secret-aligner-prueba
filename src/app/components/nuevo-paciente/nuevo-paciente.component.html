@@ -1,5 +1,8 @@
 <div class="new-patient-modal">
   <div class="card" [formGroup]="formularioPaciente">
+    <div class="close-bar">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="cerrar()"></button>
+    </div>
     <div formGroupName="datos_paciente">
       <div class="mb-3">
         <label for="nombreInput" class="form-label">Nombre</label>
