@@ -676,6 +676,22 @@
           "secretretainer": false
         }
       }
+    },
+    {
+      "id": "0faz22aez26r",
+      "datos_paciente": {
+        "nombre": "lala lala",
+        "apellidos": "",
+        "fecha_nacimiento": "",
+        "sexo": ""
+      },
+      "ficha_dental": {
+        "clinica": "",
+        "otros_datos": {
+          "recorte_alineadores": "",
+          "secretretainer": false
+        }
+      }
     }
   ]
 }

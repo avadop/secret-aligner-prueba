@@ -10,7 +10,6 @@ import { TarjetaPacienteComponent } from './components/tarjeta-paciente/tarjeta-
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NuevoPacienteComponent } from './components/nuevo-paciente/nuevo-paciente.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,8 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    NgbModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

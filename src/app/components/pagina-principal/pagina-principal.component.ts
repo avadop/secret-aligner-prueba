@@ -1,4 +1,3 @@
-import { newArray } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ResumenPaciente } from 'src/app/interfaces/resumen_paciente.type';
@@ -28,6 +27,7 @@ export class PaginaPrincipalComponent implements OnInit {
 
   realizarBusqueda() {
     if (this.valorBusqueda.value.length >= 3) {
+      this.resumenPacientesFiltrados = [];
       this.resumenPacientesFiltrados = this.resumenPacientes.filter((resumen: ResumenPaciente) => resumen.nombre.toLocaleLowerCase().includes(this.valorBusqueda.value.toLowerCase()));
     } else {
       this.resumenPacientesFiltrados = this.resumenPacientes;
