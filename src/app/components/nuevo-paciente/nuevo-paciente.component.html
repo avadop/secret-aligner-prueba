@@ -1,0 +1,49 @@
+<div class="new-patient-modal">
+  <div class="mb-3">
+    <label for="nombreInput" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="nombreInput" placeholder="Pepito">
+  </div>
+  <div class="mb-3">
+    <label for="apellidosInput" class="form-label">Apellidos</label>
+    <input type="text" class="form-control" id="apellidosInput" placeholder="Perez">
+  </div>
+
+  <!-- Fecha de naciemiento > DatePicker -->
+  <select class="form-select">
+    <option selected>--</option>
+    <option value="F">Femenino</option>
+    <option value="M">Masculino</option>
+  </select>
+  <div class="mb-3">
+    <label for="clinicaInput" class="form-label">Clinica</label>
+    <input type="text" class="form-control" id="clinicaInput" placeholder="Nombre de la Clinica">
+  </div>
+
+  Recortes Alineadores
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="recorteAlineador" id="enciaRadio">
+    <label class="form-check-label" for="enciaRadio">Recortar dejando 1-3 mm de encía</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="recorteAlineador" id="cuellosRadio" checked>
+    <label class="form-check-label" for="cuellosRadio">Recortar a nivel de los cuellos</label>
+  </div>
+
+  ¿SecretRetainer?
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="secretRetainer" id="SiRadio">
+    <label class="form-check-label" for="SiRadio">SI</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="secretRetainer" id="NoRadio" checked>
+    <label class="form-check-label" for="NoRadio">NO</label>
+  </div>
+
+  <!-- Guardar > guardara en formulario enviado al backend los datos del formulario, no es necesario dicha funcionalidad -->
+  <button type="button" class="btn btn-primary">Guardar</button>
+  <!-- Cancelar > cerrar el model, pero no borra los campos rellenos -->
+  <button type="button" class="btn btn-secondary">Cancelar</button>
+  <!-- Limpiar > borra todas las entradas del formulario -->
+  <button type="button" class="btn btn-warning">Limpiar</button>
+
+</div>
