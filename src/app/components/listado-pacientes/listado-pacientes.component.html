@@ -1,2 +1,7 @@
-<p>listado-pacientes works!</p>
 <app-tabla-pacientes  [resumenPacientes]="resumentTodosPacientes"></app-tabla-pacientes>
+<div class="card-container">
+  <ng-container *ngFor="let resumen of resumentTodosPacientes">
+    <app-tarjeta-paciente [resumenPaciente]="resumen"></app-tarjeta-paciente>
+  </ng-container>
+</div>
+
