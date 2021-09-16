@@ -1,6 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ObjectUnsubscribedError } from 'rxjs';
 import { PacienteService } from 'src/app/services/paciente.service';
 
 @Component({
@@ -19,7 +18,7 @@ export class NuevoPacienteComponent implements OnInit {
 
   crearFormulario() {
     this.formularioNuevoPaciente = this.formBuilder.group({
-      id: Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 13),
+      id: Math.random().toString(36).replace(/[^a-z0-9]+/g, '').substr(0, 13),
       datos_paciente: this.formBuilder.group({
         nombre: '',
         apellidos: '',
@@ -37,7 +36,7 @@ export class NuevoPacienteComponent implements OnInit {
   }
 
   guardarPaciente(){
-    console.log("paciente", this.formularioNuevoPaciente);
+    this.pacienteService.crearPaciente(this.formularioNuevoPaciente.value).subscribe();
     this.limpiarDatos();
   }
 

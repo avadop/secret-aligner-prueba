@@ -19,6 +19,10 @@ export class PacienteService {
     return this.httpClient.get<Array<Paciente>>(`${this.BASIC_URL}`).pipe(map(pacientes => pacientes.map(paciente => this.mapAResumenPaciente(paciente))));
   }
 
+  crearPaciente(paciente: Paciente): Observable<Paciente> {
+    return this.httpClient.post<Paciente>(this.BASIC_URL, paciente);
+  }
+
   private mapAResumenPaciente(paciente: Paciente): ResumenPaciente {
     return {
       id: paciente.id,
