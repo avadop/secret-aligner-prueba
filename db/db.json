@@ -1,0 +1,99 @@
+{
+  "ids": [
+    "607de0be7232c",
+    "607480be7232c",
+    "234sdf80df4532c",
+    "434sd480dfg532c"
+  ],
+  "607de0be7232c": {
+    "datos_paciente": {
+      "nombre": "Andres",
+      "apellidos": "Anton",
+      "fecha_nacimiento": "12/04/1978",
+      "sexo": "M"
+    },
+    "ficha_dental": {
+      "acadas_tratamiento": "ambas",
+      "dientes_no_mover": [
+        18,
+        36
+      ],
+      "estado": "planificando",
+      "clinica": "Dentix",
+      "objetivo_tratamiento": "Estética y Oclusión",
+      "otros_datos": {
+        "recorte_alineadores": "Recortar dejando 1-3 mm de encía",
+        "alineadores_pasivos": true,
+        "secretretainer": false
+      }
+    }
+  },
+  "607480be7232c": {
+    "datos_paciente": {
+      "nombre": "Patricia",
+      "apellidos": "Pomares Fernández",
+      "fecha_nacimiento": "07/02/1982",
+      "sexo": "F"
+    },
+    "ficha_dental": {
+      "acadas_tratamiento": "ambas",
+      "dientes_no_mover": [
+        36
+      ],
+      "estado": "planificando",
+      "clinica": "Clinica meyer&meyer",
+      "objetivo_tratamiento": "Estética y Oclusión",
+      "otros_datos": {
+        "recorte_alineadores": "Recortar dejando 1-3 mm de encía",
+        "alineadores_pasivos": false,
+        "secretretainer": false
+      }
+    }
+  },
+  "234sdf80df4532c": {
+    "datos_paciente": {
+      "nombre": "Maria",
+      "apellidos": "de la Torre",
+      "fecha_nacimiento": "22/08/1987",
+      "sexo": "F"
+    },
+    "ficha_dental": {
+      "acadas_tratamiento": "ambas",
+      "dientes_no_mover": [
+        18,
+        36
+      ],
+      "estado": "enviado",
+      "clinica": "Clinica Denta Jose",
+      "objetivo_tratamiento": "Estética y Oclusión",
+      "otros_datos": {
+        "recorte_alineadores": "Recortar dejando 1-3 mm de encía",
+        "alineadores_pasivos": false,
+        "secretretainer": false
+      }
+    }
+  },
+  "434sd480dfg532c": {
+    "datos_paciente": {
+      "nombre": "Julio",
+      "apellidos": "Gomez Rodiguez",
+      "fecha_nacimiento": "12/02/1978",
+      "sexo": "M"
+    },
+    "ficha_dental": {
+      "acadas_tratamiento": "inferios",
+      "dientes_no_mover": [
+        36,
+        48
+      ],
+      "estado": "solicitado",
+      "clinica": "Dental Light",
+      "objetivo_tratamiento": "Oclusión",
+      "otros_datos": {
+        "recorte_alineadores": "Recortar a nivel de los cuellos",
+        "alineadores_pasivos": true,
+        "secretretainer": false
+      }
+    }
+  }
+}
