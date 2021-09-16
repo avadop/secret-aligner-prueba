@@ -1,3 +1,27 @@
 .new-patient-modal{
   padding: 1.5rem;
+  max-width: 27rem;
+
+  .row-inputs-1{
+    display:flex;
+    justify-content: space-between;
+    .sex-input{
+      width: 10.5rem;
+    }
+  }
+
+  .form-check{
+    margin-left: 0.5rem;
+  }
+
+  .buttons-row{
+    display:flex;
+    justify-content: space-between;
+    button{
+      width: 100%;
+    }
+    .btn-secondary{
+      margin: 0 0.8rem;
+    }
+  }
 }
